@@ -1,1 +1,44 @@
-<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>لقاء الموتى | مركز الطلبات التذكاري</title><link rel="stylesheet" href="css/main.css"></head><body><div class="notice">تجربة خيالية تذكارية وليست خدمة حقيقية للتواصل مع الموتى.</div><header><a class="brand" href="index.html"><b>ل</b><span>لقاء الموتى<small>مركز الطلبات التذكاري</small></span></a><nav><a href="index.html">الرئيسية</a><a href="track.html">متابعة طلب</a><a href="archive.html">الأرشيف</a><a href="faq.html">الأسئلة</a></nav></header><main><section class="hero"><div><em>MEMORIAL REQUEST CENTER • 2.0</em><h1>هناك أسماء لا تنتهي حكايتها عند الغياب.</h1><p>قدّم طلب لقاء تذكاري، وسجّل بيانات الشخص والرسالة التي لم تجد وقتًا لتقولها.</p><div class="actions"><a class="btn primary" href="request.html">بدء طلب جديد ←</a><a class="btn" href="track.html">متابعة طلب</a></div><div class="trust">● النظام متاح　 🔒 بيانات تجريبية محلية　 ⌁ لا يلزم حساب</div></div><div class="terminal"><div class="thead">REQUEST CENTER <span>● ONLINE</span></div><pre>&gt; initializing memorial registry...\n&gt; checking request channel...\n&gt; channel ready.</pre><strong>أدخل الاسم لبدء السجل</strong><a href="request.html">OPEN REQUEST FORM</a></div></section><section><em>HOW IT WORKS</em><h2>طلب واحد، ملف كامل.</h2><div class="cards"><article><b>01</b><h3>إدخال البيانات</h3><p>بيانات مقدم الطلب والشخص المطلوب.</p></article><article><b>02</b><h3>المراجعة</h3><p>راجع التفاصيل والرسالة قبل الإرسال.</p></article><article><b>03</b><h3>ملف الطلب</h3><p>رقم وحالة ومسار متابعة داخل التجربة.</p></article></div></section></main><footer>© 2026 لقاء الموتى — تجربة خيالية تذكارية</footer></body></html>
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>لقاء الموتى — بوابة اللقاء التذكاري</title>
+<meta name="description" content="لقاء الموتى — أرسل طلب لقاء تذكاري، اختر الشخص، وأكمل خطوات التجربة الرقمية.">
+<meta name="theme-color" content="#07050a">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="ambient"></div>
+<header><a class="brand" href="#"><span>☠</span> لقاء الموتى</a><div class="header-note">بوابة الذكريات</div></header>
+
+<main>
+<section class="hero">
+<div class="sigil">☠</div>
+<p class="eyebrow">THE MEMORIAL GATE</p>
+<h1>بعض اللقاءات تبدأ<br><strong>باسمٍ وتاريخ.</strong></h1>
+<p class="intro">أدخل بيانات الشخص الراحل، وسنحوّل طلبك إلى تجربة تذكارية رقمية منظمة.</p>
+
+<div class="progress">
+<div class="p active"><b>01</b><span>البيانات</span></div><i></i><div class="p"><b>02</b><span>الطلب</span></div><i></i><div class="p"><b>03</b><span>الموعد</span></div><i></i><div class="p"><b>04</b><span>اللقاء</span></div>
+</div>
+
+<form id="form" class="panel">
+<div class="title"><span>01</span><div><h2>بيانات الشخص</h2><p>لا نحتاج إلا إلى المعلومات الأساسية للبدء.</p></div></div>
+<label>اسم الشخص الراحل<input id="name" required maxlength="100" placeholder="مثال: نجيب محفوظ" autocomplete="off"></label>
+<div id="suggestions" class="suggestions"></div>
+<div class="grid">
+<label>تاريخ الوفاة<input id="death" type="date" required></label>
+<label>نوع اللقاء<select id="type"><option>لقاء تذكاري</option><option>استكشاف السيرة</option><option>مشهد فني</option></select></label>
+</div>
+<label>لماذا تريد هذا اللقاء؟<textarea id="message" maxlength="500" placeholder="اكتب شيئًا قصيرًا..."></textarea></label>
+<button class="primary" type="submit">إرسال طلب اللقاء <span>↗</span></button>
+<p class="disclaimer">تنبيه: هذه تجربة فنية وتذكارية فقط، ولا تدّعي التواصل الحقيقي مع الموتى أو نقل رسائل منهم.</p>
+</form>
+</section>
+
+<section id="ticket" class="ticket hidden"></section>
+</main>
+<footer>© 2026 لقاء الموتى — تجربة تذكارية رقمية</footer>
+<script src="app.js"></script>
+</body>
+</html>
