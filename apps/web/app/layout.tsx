@@ -1,0 +1,3 @@
+import './globals.css'; import type {Metadata} from 'next';
+export const metadata:Metadata={title:'لقاء الموتى | تجربة تذكارية سينمائية',description:'تجربة فنية وتذكارية رقمية لإعادة تخيل الذكرى في مشهد سينمائي غامض.',metadataBase:new URL(process.env.NEXT_PUBLIC_SITE_URL||'http://localhost:3000'),openGraph:{title:'لقاء الموتى',description:'بعض اللقاءات تبدأ باسمٍ وتاريخ...',type:'website',locale:'ar_AR'},twitter:{card:'summary_large_image',title:'لقاء الموتى',description:'تجربة تذكارية سينمائية عربية.'},alternates:{canonical:'/'}};
+export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="ar" dir="rtl"><body>{children}</body></html>}

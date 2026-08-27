@@ -1,0 +1,40 @@
+generator client { provider = "prisma-client-js" }
+datasource db { provider = "sqlite" url = env("DATABASE_URL") }
+
+enum RequestStatus { pending processing ready failed }
+enum Privacy { public unlisted private }
+
+enum Relationship { relative friend public_figure historical other }
+
+enum VoiceMode { screen_voice both }
+
+enum SceneType { calm mysterious era monochrome cemetery }
+
+model MemorialRequest {
+  id               String        @id @default(cuid())
+  requestCode      String        @unique
+  personName       String
+  deathDate        DateTime
+  relationship     Relationship
+  imageUrl         String
+  message          String
+  sceneType        SceneType
+  duration         Int
+  voiceMode        VoiceMode
+  privacy          Privacy       @default(unlisted)
+  status           RequestStatus  @default(pending)
+  appointmentDate  DateTime?
+  appointmentTime  String?
+  videoUrl         String?
+  providerJobId    String?
+  providerName     String?
+  createdAt        DateTime      @default(now())
+  updatedAt        DateTime      @updatedAt
+}
+
+model AdminUser {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  passwordHash String
+  createdAt    DateTime @default(now())
+}

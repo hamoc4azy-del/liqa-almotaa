@@ -1,0 +1,3 @@
+import {FastifyInstance} from 'fastify'; import {storage} from '../lib/storage';
+const allowed=new Set(['image/jpeg','image/png','image/webp']);
+export async function uploadRoutes(app:FastifyInstance){app.post('/api/uploads/image',async(req,reply)=>{const file=await req.file(); if(!file)return reply.code(400).send({error:'لم يتم اختيار صورة'}); if(!allowed.has(file.mimetype))return reply.code(415).send({error:'الامتداد المسموح JPG / PNG / WEBP'}); const buf=await file.toBuffer(); if(buf.length>8*1024*1024)return reply.code(413).send({error:'حجم الصورة يتجاوز 8MB'}); const url=await storage.save(buf,file.mimetype); return {url}})}

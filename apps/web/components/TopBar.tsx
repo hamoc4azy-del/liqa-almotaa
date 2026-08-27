@@ -1,0 +1,1 @@
+import Link from 'next/link'; export default function TopBar(){return <header className="topbar"><Link href="/" className="brand">لقاء <span>الموتى</span></Link><nav className="nav"><Link href="/create">إنشاء لقاء</Link><Link href="/search">سجل الذكريات</Link></nav></header>}
