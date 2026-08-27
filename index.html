@@ -1,44 +1,11 @@
-<!doctype html>
-<html lang="ar" dir="rtl">
-<head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>لقاء الموتى — بوابة اللقاء التذكاري</title>
-<meta name="description" content="لقاء الموتى — أرسل طلب لقاء تذكاري، اختر الشخص، وأكمل خطوات التجربة الرقمية.">
-<meta name="theme-color" content="#07050a">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-<div class="ambient"></div>
-<header><a class="brand" href="#"><span>☠</span> لقاء الموتى</a><div class="header-note">بوابة الذكريات</div></header>
-
-<main>
-<section class="hero">
-<div class="sigil">☠</div>
-<p class="eyebrow">THE MEMORIAL GATE</p>
-<h1>بعض اللقاءات تبدأ<br><strong>باسمٍ وتاريخ.</strong></h1>
-<p class="intro">أدخل بيانات الشخص الراحل، وسنحوّل طلبك إلى تجربة تذكارية رقمية منظمة.</p>
-
-<div class="progress">
-<div class="p active"><b>01</b><span>البيانات</span></div><i></i><div class="p"><b>02</b><span>الطلب</span></div><i></i><div class="p"><b>03</b><span>الموعد</span></div><i></i><div class="p"><b>04</b><span>اللقاء</span></div>
-</div>
-
-<form id="form" class="panel">
-<div class="title"><span>01</span><div><h2>بيانات الشخص</h2><p>لا نحتاج إلا إلى المعلومات الأساسية للبدء.</p></div></div>
-<label>اسم الشخص الراحل<input id="name" required maxlength="100" placeholder="مثال: نجيب محفوظ" autocomplete="off"></label>
-<div id="suggestions" class="suggestions"></div>
-<div class="grid">
-<label>تاريخ الوفاة<input id="death" type="date" required></label>
-<label>نوع اللقاء<select id="type"><option>لقاء تذكاري</option><option>استكشاف السيرة</option><option>مشهد فني</option></select></label>
-</div>
-<label>لماذا تريد هذا اللقاء؟<textarea id="message" maxlength="500" placeholder="اكتب شيئًا قصيرًا..."></textarea></label>
-<button class="primary" type="submit">إرسال طلب اللقاء <span>↗</span></button>
-<p class="disclaimer">تنبيه: هذه تجربة فنية وتذكارية فقط، ولا تدّعي التواصل الحقيقي مع الموتى أو نقل رسائل منهم.</p>
-</form>
-</section>
-
-<section id="ticket" class="ticket hidden"></section>
-</main>
-<footer>© 2026 لقاء الموتى — تجربة تذكارية رقمية</footer>
-<script src="app.js"></script>
-</body>
-</html>
+<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>لقاء الموتى | بوابة اللقاء</title><meta name="description" content="لقاء الموتى — تجربة تذكارية رقمية تبدأ بطلب لقاء وتنتهي بمشهد فني تذكاري."><link rel="stylesheet" href="style.css"></head><body>
+<div class="grain"></div><div class="moon"></div><div class="mist m1"></div><div class="mist m2"></div>
+<header><a href="#" class="logo">☠ <span>لقاء الموتى</span></a><button class="about" onclick="document.getElementById('about').showModal()">عن التجربة</button></header>
+<section class="hero" id="home"><div class="hero-overlay"></div><div class="hero-content"><div class="mark">†</div><div class="kicker">THE MEMORIAL GATE</div><h1>هناك أسماء<br><em>لم تنتهِ قصتها.</em></h1><p>أرسل طلب لقاء تذكاري، ودع البوابة تجهّز لك موعد التجربة.</p><button class="cta" onclick="go('request')">ابدأ طلب اللقاء <b>←</b></button><div class="scroll">مرّر للدخول إلى البوابة <span>↓</span></div></div></section>
+<section class="request" id="request"><div class="section-head"><span>01 / 04</span><h2>من تريد أن تلتقي؟</h2><p>أدخل البيانات الأساسية للشخص الراحل.</p></div>
+<form id="form"><div class="field big"><label>اسم الشخص الراحل</label><input id="name" placeholder="اكتب الاسم كاملًا" required></div><div class="two"><div class="field"><label>تاريخ الوفاة</label><input id="death" type="date" required></div><div class="field"><label>نوع اللقاء</label><select id="type"><option>لقاء تذكاري</option><option>استكشاف السيرة</option><option>مشهد فني</option></select></div></div><div class="field"><label>رسالة قبل اللقاء <small>اختياري</small></label><textarea id="msg" placeholder="لو كان لديك شيء تريد أن تتركه قبل بدء التجربة..."></textarea></div><button class="send">إرسال طلب اللقاء <span>☠</span></button><p class="safe">تجربة فنية وتذكارية فقط — لا يوجد تواصل حقيقي مع الموتى.</p></form></section>
+<section id="status" class="status hidden"></section>
+<section class="features"><div><b>☾</b><h3>طلب خاص</h3><p>كل طلب يحصل على رقم تجربة مستقل.</p></div><div><b>†</b><h3>موعد اللقاء</h3><p>تجربة موعد رمزي قبل الدخول.</p></div><div><b>☠</b><h3>المشهد</h3><p>تصور فني واضح أنه خيالي.</p></div></section>
+<footer>© 2026 لقاء الموتى — ذاكرة رقمية، لا ادعاء خارق للطبيعة.</footer>
+<dialog id="about"><button onclick="this.closest('dialog').close()">×</button><h2>عن «لقاء الموتى»</h2><p>الموقع تجربة تذكارية رقمية مستوحاة من فكرة اللقاء الرمزي مع أشخاص رحلوا. أي صورة أو مشهد مولّد بالذكاء الاصطناعي هو تصور فني وليس صورة حقيقية أو وسيلة للتواصل مع المتوفى.</p></dialog>
+<script src="app.js"></script></body></html>
