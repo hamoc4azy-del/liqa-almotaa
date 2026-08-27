@@ -1,6 +1,8 @@
 {
-  "name":"liqaa-almawta",
-  "private":true,
-  "scripts":{"dev":"concurrently \"npm:dev:web\" \"npm:dev:api\"","dev:web":"npm --prefix apps/web run dev","dev:api":"npm --prefix apps/api run dev","build":"npm --prefix apps/web run build && npm --prefix apps/api run build","start":"concurrently \"npm:start:web\" \"npm:start:api\"","start:web":"npm --prefix apps/web run start","start:api":"npm --prefix apps/api run start","db:push":"npm --prefix apps/api run db:push","db:seed":"npm --prefix apps/api run db:seed"},
-  "devDependencies":{"concurrently":"^9.1.2"}
+  "name": "liqaa-api-deploy",
+  "private": true,
+  "scripts": {
+    "build": "npm --prefix apps/api install && npm --prefix apps/api run build",
+    "start": "npm --prefix apps/api run start"
+  }
 }
