@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://hamoc4azy-del.github.io/liqa-almotaa/sitemap.xml
