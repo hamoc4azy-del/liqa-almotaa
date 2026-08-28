@@ -1,6 +1,6 @@
 import { VideoJob, VideoJobInput, VideoProvider } from './types';
 
-export const mockProvider: VideoProvider = {
+export const MockVideoProvider: VideoProvider = {
   async create(_input: VideoJobInput): Promise<VideoJob> {
     return {
       providerJobId: `mock_${Date.now()}`,
@@ -25,4 +25,4 @@ export const mockProvider: VideoProvider = {
         'https://cdn.coverr.co/videos/coverr-a-walk-in-the-forest-1573/1080p.mp4',
     };
   },
-};
+};	

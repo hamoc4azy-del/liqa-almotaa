@@ -1,7 +1,7 @@
 import { config } from '../config';
 import { VideoJob, VideoJobInput, VideoProvider } from './types';
 
-export const replicateProvider: VideoProvider = {
+export const ReplicateVideoProvider: VideoProvider = {
   async create(input: VideoJobInput): Promise<VideoJob> {
     const r = await fetch('https://api.replicate.com/v1/predictions', {
       method: 'POST',
